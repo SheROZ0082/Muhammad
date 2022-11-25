@@ -1,6 +1,8 @@
 package com.example.HW4;
 
-public class Text {
+import java.io.Serializable;
+
+public class Text  {
 
 
     public String getText() {
@@ -16,4 +18,18 @@ public class Text {
     }
 
     private String text;
+    private int ImageView;
+
+    public int getImageView() {
+        return ImageView;
+    }
+
+    public void setImageView(int imageView) {
+        ImageView = imageView;
+    }
+
+    public Text(String text, int imageView) {
+        this.text = text;
+        ImageView = imageView;
+    }
 }

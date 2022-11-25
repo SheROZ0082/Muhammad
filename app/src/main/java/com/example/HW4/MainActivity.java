@@ -25,17 +25,18 @@ loadData();
     }
     private void loadData() {
         continentsList.clear();
-        continentsList.add(new Text( "DoDo pizza"));
-        continentsList.add(new Text( "Imperial pizza"));
-        continentsList.add(new Text("Domino pizza"));
-        continentsList.add(new Text( "FNAF pizza"));
-        continentsList.add(new Text( "Gold pizza"));
+        continentsList.add(new Text( "DoDo pizza",R.drawable.img));
+        continentsList.add(new Text( "Imperial pizza",R.drawable.img17));
+        continentsList.add(new Text("Domino pizza",R.drawable.img_1));
+        continentsList.add(new Text( "FNAF pizza",R.drawable.img_1));
+        continentsList.add(new Text( "Gold pizza",R.drawable.img_1));
     }
 
     @Override
-    public void onClick(Text text) {
+    public void onClick(Text text, Text img) {
         Intent intent = new Intent(MainActivity.this,SecondActivity.class);
         intent.putExtra("text", text.getText());
+        intent.putExtra("IMG", img.getImageView());
         startActivity(intent);
     }
 }
